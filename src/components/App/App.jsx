@@ -25,14 +25,12 @@ function App() {
       });
   };
 
-  //   // const likeGalleryItem
-
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <p>Gallery goes here</p>
+      {/* <p>Gallery goes here</p> */}
 
       <GalleryList fetchGallery={fetchGallery} galleryItems={galleryItems} />
       {/* <img src="images/kurt.jpg" /> */}
@@ -41,18 +39,3 @@ function App() {
 }
 
 export default App;
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1 className="App-title">Gallery of My Life</h1>
-//       </header>
-//       <p>Gallery goes here</p>
-//       <img src="images/baking.jpg"/>
-//       {/* put likeGalleryItem={likeGalleryItem} below */}
-//       <GalleryList galleryItems={galleryItems} />
-//     </div>
-//   );
-// }
-
-// export default App;
