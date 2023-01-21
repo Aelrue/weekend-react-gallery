@@ -25,6 +25,10 @@ function App() {
       });
   };
 
+  const handleClick = (photo) => {
+    console.log("it clicked", photo);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -32,7 +36,11 @@ function App() {
       </header>
       {/* <p>Gallery goes here</p> */}
 
-      <GalleryList fetchGallery={fetchGallery} galleryItems={galleryItems} />
+      <GalleryList
+        fetchGallery={fetchGallery}
+        galleryItems={galleryItems}
+        handleClick={handleClick}
+      />
       {/* <img src="images/kurt.jpg" /> */}
     </div>
   );
