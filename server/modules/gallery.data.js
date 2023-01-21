@@ -22,8 +22,7 @@ const galleryItems = [
   {
     id: 4,
     path: "images/kurt.jpg",
-    description:
-      "My husband, Kurt. In front of him is a flight of different beers he was trying at a brewery in Seattle, WA.",
+    description: "My dearest husband, Kurt.",
     likes: 0,
   },
   {
