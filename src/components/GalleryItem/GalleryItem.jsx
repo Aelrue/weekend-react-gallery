@@ -1,7 +1,7 @@
 import react, { useState } from "react";
 import axios from "axios";
 
-function GalleryItem({ photo, handleClick }) {
+function GalleryItem({ photo }) {
   console.log("hello", photo);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -23,7 +23,7 @@ function GalleryItem({ photo, handleClick }) {
   // }
 
   if (isClicked) {
-    return <div>{photo.description}</div>;
+    return <div onClick={() => togglePhoto()}>{photo.description}</div>;
   } else
     return (
       <div>
