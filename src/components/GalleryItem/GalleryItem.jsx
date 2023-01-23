@@ -28,6 +28,8 @@ function GalleryItem({ photo }) {
     return (
       <div>
         <img src={photo.path} onClick={() => togglePhoto()} />
+        <p>Likes: {photo.likes}</p>
+        <button>Like</button>
       </div>
     );
 }
