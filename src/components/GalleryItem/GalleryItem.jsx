@@ -1,12 +1,12 @@
 import react, { useState } from "react";
 import axios from "axios";
 
-function GalleryItem({ photo }) {
-  console.log("hello", photo);
+function GalleryItem({ photo, likeButton }) {
+  // console.log("hello", photo);
   const [isClicked, setIsClicked] = useState(false);
 
   const togglePhoto = () => {
-    console.log("clicked", isClicked);
+    // console.log("clicked", isClicked);
     setIsClicked(!isClicked);
   };
 
@@ -29,7 +29,7 @@ function GalleryItem({ photo }) {
       <div>
         <img src={photo.path} onClick={() => togglePhoto()} />
         <p>Likes: {photo.likes}</p>
-        <button>Like</button>
+        <button onClick={() => likeButton(photo.id)}>Like</button>
       </div>
     );
 }

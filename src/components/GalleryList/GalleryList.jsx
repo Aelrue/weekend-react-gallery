@@ -1,8 +1,8 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ galleryItems, fetchGallery, handleClick }) {
+function GalleryList({ galleryItems, fetchGallery, likeButton }) {
   //   // put our photos on the DOM
-  console.log("In GalleryList", galleryItems);
+  // console.log("In GalleryList", galleryItems);
   return (
     <div>
       {galleryItems.map((photo) => {
@@ -11,7 +11,7 @@ function GalleryList({ galleryItems, fetchGallery, handleClick }) {
             fetchGallery={fetchGallery}
             key={photo.id}
             photo={photo}
-            handleClick={handleClick}
+            likeButton={likeButton}
           />
         );
       })}

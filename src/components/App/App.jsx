@@ -5,7 +5,7 @@ import GalleryList from "../GalleryList/GalleryList";
 
 function App() {
   const [galleryItems, setGalleryItems] = useState([]);
-  console.log(galleryItems);
+  // console.log(galleryItems);
 
   useEffect(() => {
     fetchGallery();
@@ -17,7 +17,7 @@ function App() {
       url: "/gallery",
     })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         setGalleryItems(response.data);
       })
       .catch(function (error) {
@@ -25,8 +25,19 @@ function App() {
       });
   };
 
-  const handleClick = (photo) => {
-    console.log("it clicked", photo);
+  const likeButton = (id) => {
+    console.log("in likeButton");
+    axios({
+      method: "PUT",
+      url: `/gallery/like/${id}`,
+    })
+      .then((response) => {
+        console.log(response);
+        fetchGallery();
+      })
+      .catch((error) => {
+        console.log("error with put", error);
+      });
   };
 
   return (
@@ -39,7 +50,7 @@ function App() {
       <GalleryList
         fetchGallery={fetchGallery}
         galleryItems={galleryItems}
-        handleClick={handleClick}
+        likeButton={likeButton}
       />
       {/* <img src="images/kurt.jpg" /> */}
     </div>
